@@ -3,6 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 var app = express();
+const port = process.env.port || 3000;
 
 app.set('view engine', 'hbs');
 
@@ -38,6 +39,6 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Sever started and listening at 3000...');
+app.listen(port, () => {
+    console.log(`Sever started and listening at ${port}...`);
 });

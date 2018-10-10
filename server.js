@@ -39,6 +39,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        title: 'Projects',
+        pageHeader: 'Projects...'
+    });
+});
+
 app.listen(port, () => {
     console.log(`Sever started and listening at ${port}...`);
 });
